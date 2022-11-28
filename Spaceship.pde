@@ -6,6 +6,9 @@ class Spaceship extends Floater{
       yCorners = new int[]{-10,0,10,0};
       myCenterX = 200;
       myCenterY = 200;
+      myXspeed = 0;
+      myYspeed = 0;
+      myPointDirection = 0;
     }
     public void setXspeed(double x){
       myXspeed = x;
