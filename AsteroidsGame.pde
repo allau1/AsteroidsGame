@@ -24,7 +24,6 @@ public void draw()
   for (int i = 0; i < nums.size(); i++){
     nums.get(i).move();
     nums.get(i).show();
-    System.out.println(dist((float)bob2.getX(), (float)bob2.getY(), (float)nums.get(i).getXA(), (float)nums.get(i).getYA()));
     if (dist((float)bob2.getX(), (float)bob2.getY(), (float)nums.get(i).getXA(), (float)nums.get(i).getYA()) < 40)
       {
       nums.remove(i);
