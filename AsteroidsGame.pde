@@ -27,7 +27,6 @@ public void draw()
     if (dist((float)bob2.getX(), (float)bob2.getY(), (float)nums.get(i).getXA(), (float)nums.get(i).getYA()) < 40)
       {
       nums.remove(i);
-      System.out.println(nums.size());
       
       }
     }
