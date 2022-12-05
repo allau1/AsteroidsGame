@@ -1,19 +1,41 @@
 Star[] array1 = new Star[150];
 Spaceship bob2 = new Spaceship();
-public void setup() 
+ArrayList <Asteroid> nums = new ArrayList <Asteroid> ();
+
+public void setup()
 {
   size(400,400);
   for (int i = 0; i < 150; i++){
     array1[i] = new Star();
   }
+  nums.add(new Asteroid());
+  nums.add(new Asteroid());
+  nums.add(new Asteroid());
+  nums.add(new Asteroid());
+  nums.add(new Asteroid());
 }
-public void draw() 
+public void draw()
 {
   //your code here
   background(0);
   for (int i = 0; i < 100; i++){
     array1[i].show();
   }
+  for (int i = 0; i < nums.size(); i++){
+    nums.get(i).move();
+    nums.get(i).show();
+    System.out.println(dist((float)bob2.getX(), (float)bob2.getY(), (float)nums.get(i).getXA(), (float)nums.get(i).getYA()));
+    if (dist((float)bob2.getX(), (float)bob2.getY(), (float)nums.get(i).getXA(), (float)nums.get(i).getYA()) < 40)
+      {
+      nums.remove(i);
+      System.out.println(nums.size());
+      
+      }
+    }
+  //for (int i = 0; i < nums.size(); i++) {
+    
+  //}
+  
   bob2.show();
   if(keyPressed){
     if(key == 'w' || key == 'W'){
